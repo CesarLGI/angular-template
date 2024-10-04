@@ -1,0 +1,5 @@
+<label>{{ label() }}</label>
+@for(option of options(); track option){
+<p-radioButton [formControlName]="controlName()" [label]="option.label" [value]="option.value" />
+}
+<validator [controlName]="controlName()" [customErrMsg]="customErrMsg()" />

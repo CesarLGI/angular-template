@@ -1,0 +1,29 @@
+@if(isFloat()){
+<p-floatLabel>
+    <p-multiSelect
+        [filter]="filter()"
+        [filterBy]="filterBy()"
+        [formControlName]="controlName()"
+        [optionLabel]="optionLabel()"
+        [options]="options()"
+        [optionValue]="optionValue()"
+        [showClear]="true"
+        appendTo="body"
+    >
+    </p-multiSelect>
+    <label [for]="controlName()" class="Field-label">{{ label() }}</label>
+</p-floatLabel>
+} @else {
+<label [for]="controlName()" class="Field-label">{{ label() }}</label>
+<p-multiSelect
+    [filter]="filter()"
+    [filterBy]="filterBy()"
+    [formControlName]="controlName()"
+    [optionLabel]="optionLabel()"
+    [options]="options()"
+    [optionValue]="optionValue()"
+    [showClear]="true"
+    appendTo="body"
+></p-multiSelect>
+}
+<validator [controlName]="controlName()" [customErrMsg]="customErrMsg()" />

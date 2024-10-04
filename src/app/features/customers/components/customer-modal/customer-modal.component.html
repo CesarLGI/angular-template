@@ -1,0 +1,38 @@
+<div>
+    <form action="" [formGroup]="formGroup">
+        <input-text controlName="name" label="Name" [isFloat]="true" [customErrMsg]="{ required: '* OBLIGATORIO' }" />
+        <input-number controlName="test" label="Test" [isFloat]="true" />
+        <dropdown
+            [filter]="true"
+            [isFloat]="true"
+            [options]="cities"
+            controlName="cityId"
+            filterBy="name"
+            label="City"
+            optionLabel="name"
+            optionValue="code"
+        ></dropdown>
+        <input-text-area controlName="address" label="Address" [isFloat]="true" [rows]="6"> </input-text-area>
+        <input-mask controlName="phone" label="Phone" [isFloat]="true" mask="(999) 999-9999" />
+        <checkbox-group controlName="roleIds" label="Roles" [options]="mappedRoles" [customErrMsg]="{ minlength: '* You must select at least 2 roles' }" />
+        <checkbox controlName="isAdmin" label="Is Admin" />
+        <multi-select
+            [filter]="true"
+            [isFloat]="true"
+            [options]="cities"
+            controlName="cityMulti"
+            filterBy="name"
+            label="City"
+            optionLabel="name"
+            optionValue="code"
+        />
+        <radiobutton-group controlName="favRole" label="Fav Role" [options]="mappedRoles" />
+    </form>
+    <footer>
+        <p-button pButton type="button" label="Guardar" icon="pi pi-check" (click)="onSubmit()"></p-button>
+        <p-button pButton type="button" label="Cancelar" icon="pi pi-times" (click)="onClose()"></p-button>
+    </footer>
+    <pre>
+        {{ formGroup.value | json }}
+    </pre>
+</div>

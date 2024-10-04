@@ -1,0 +1,10 @@
+.p-float-label {
+    & p-inputnumber:focus ~ label,
+    & p-inputnumber.p-inputwrapper-focus ~ label,
+    & p-inputnumber.p-inputwrapper-filled ~ label {
+        top: 0.1rem;
+        font-size: 0.75rem;
+        background-color: white;
+        padding-inline: 0.25rem;
+    }
+}

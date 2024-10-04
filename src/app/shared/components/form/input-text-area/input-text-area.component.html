@@ -1,0 +1,10 @@
+@if(isFloat()){
+<p-floatLabel>
+    <textarea pInputTextarea [formControlName]="controlName()" [autoResize]="autoResize()" [rows]="rows()"></textarea>
+    <label [for]="controlName()" class="Field-label">{{ label() }}</label>
+</p-floatLabel>
+} @else {
+<label [for]="controlName()" class="Field-label">{{ label() }}</label>
+<textarea pInputTextarea [formControlName]="controlName()" [autoResize]="autoResize()" [rows]="rows()"></textarea>
+}
+<validator [controlName]="controlName()" [customErrMsg]="customErrMsg()" />

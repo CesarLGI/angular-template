@@ -1,0 +1,8 @@
+<p>Bienvenido a home</p>
+<p>{{ authStateService.token() }}</p>
+<p>{{ authStateService.display() }}</p>
+
+<button (click)="logout()">Logout</button>
+<button (click)="refresh()">Refresh Token</button>
+
+<p-button label="Check" icon="pi pi-check"></p-button>

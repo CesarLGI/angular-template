@@ -1,0 +1,13 @@
+<div>
+    <p>user-modal works!</p>
+    <p>Formulario</p>
+    <p>{{ config.data.dataModal | json }}</p>
+    <p>{{ formGroup.getRawValue() | json }}</p>
+    <form action="" [formGroup]="formGroup">
+        <input type="text" name="firstName" formControlName="firstName" />
+    </form>
+    <footer>
+        <p-button pButton type="button" label="Guardar" icon="pi pi-check" (click)="onSubmit()"></p-button>
+        <p-button pButton type="button" label="Cancelar" icon="pi pi-times" (click)="onClose()"></p-button>
+    </footer>
+</div>

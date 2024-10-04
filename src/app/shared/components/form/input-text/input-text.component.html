@@ -1,0 +1,11 @@
+@if(isFloat()){
+<p-floatLabel>
+    <input pInputText [formControlName]="controlName()" type="text" />
+    <label [for]="controlName()" class="Field-label">{{ label() }}</label>
+</p-floatLabel>
+} @else {
+<label [for]="controlName()" class="Field-label">{{ label() }}</label>
+<input pInputText [formControlName]="controlName()" type="text" />
+}
+<!-- Validator -->
+<validator [controlName]="controlName()" [customErrMsg]="customErrMsg()" />

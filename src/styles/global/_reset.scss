@@ -1,0 +1,154 @@
+@use 'sass-utils' as *;
+
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		box-sizing: border-box;
+		vertical-align: baseline;
+	}
+
+	* {
+		&::-webkit-scrollbar {
+			width: 0.625rem;
+			height: 0.875rem;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: $main1Color;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba($main1Color, 0.15);
+			border-radius: 0.5rem;
+			border: 0.1875rem solid $bgPageColor;
+		}
+	}
+
+	*::before,
+	*::after {
+		display: block;
+	}
+
+	*:focus {
+		outline: none;
+	}
+
+	img,
+	picture,
+	video,
+	iframe,
+	figure {
+		max-width: 100%;
+		width: 100%;
+		display: block;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		font-size: inherit;
+	}
+
+	p a {
+		display: inline;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	html {
+		scroll-behavior: smooth;
+		font-size: 100%;
+
+		@media (min-width: 2560px) {
+			font-size: 110%;
+		}
+		@media (min-width: 3840px) {
+			font-size: 250%;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	span,
+	a,
+	strong,
+	blockquote,
+	i,
+	b,
+	u,
+	em,
+	small,
+	sup,
+	sub,
+	code,
+	pre {
+		font-size: inherit;
+		font-weight: inherit;
+		font-style: inherit;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	blockquote:before,
+	blockquote:after,
+	q:before,
+	q:after {
+		content: '';
+		content: none;
+	}
+
+	form,
+	input,
+	textarea,
+	select,
+	button,
+	label {
+		font-family: inherit;
+		hyphens: auto;
+		display: block;
+		appearance: none;
+	}
+
+	table,
+	tr,
+	td {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	svg {
+		appearance: none;
+	}
+
+	body {
+		font-size: 100%;
+		min-height: 100vh;
+		font-smooth: always;
+		background: $bgPageColor;
+		overflow: hidden;
+		hyphens: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		* {
+			animation: none !important;
+			transition: none !important;
+		}
+	}
+}

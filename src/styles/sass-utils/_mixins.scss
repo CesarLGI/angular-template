@@ -1,0 +1,64 @@
+@mixin overflow-ellipsis() {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin overflow-clip() {
+	text-overflow: clip;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin overflow-none() {
+	text-overflow: unset;
+	white-space: unset;
+	overflow: unset;
+}
+
+@mixin theme-colors($theme-color) {
+	background-color: $theme-color;
+	border-color: darken($theme-color, 10%);
+
+	&:hover {
+		background-color: lighten($theme-color, 10%);
+	}
+}
+
+
+// Breakpoints (Desktop First)
+@mixin breakpoint-xs {
+	@media screen and (max-width: 320px) {
+		@content;
+	}
+}
+
+@mixin breakpoint-sm {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin breakpoint-md {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin breakpoint-lg {
+	@media screen and (max-width: 960px) {
+		@content;
+	}
+}
+
+@mixin breakpoint-xl {
+	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin breakpoint-xxl {
+	@media screen and (max-width: 1328px) {
+		@content;
+	}
+}

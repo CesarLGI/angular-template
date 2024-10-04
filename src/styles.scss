@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+// Main
+@use 'styles/main';
+
+// PrimeNg
+@use 'primeng/resources/primeng.css';
+
+// Ngx-Spinner
+@use '../node_modules/ngx-spinner/animations/ball-clip-rotate.css';

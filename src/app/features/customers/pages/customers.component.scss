@@ -1,0 +1,11 @@
+@use 'sass-utils' as *;
+
+.text {
+    background-color: $main1Color;
+    color: #fff;
+    font-size: 20px;
+
+    @include breakpoint-xs {
+        background-color: $errorColor1;
+    }
+}

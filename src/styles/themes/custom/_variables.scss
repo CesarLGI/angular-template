@@ -1,0 +1,17 @@
+// Theme Specific Variables
+$primaryColor: #2196F3;
+$primaryDarkColor: #1E88E5;
+$primaryDarkerColor: #1976D2;
+$primaryTextColor: #ffffff;
+
+// Mandatory Designer Variables
+@import './variables/general';
+@import './variables/form';
+@import './variables/button';
+@import './variables/panel';
+@import './variables/_data';
+@import './variables/_overlay';
+@import './variables/_message';
+@import './variables/_menu';
+@import './variables/_media';
+@import './variables/_misc';

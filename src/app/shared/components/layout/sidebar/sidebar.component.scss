@@ -1,0 +1,36 @@
+@use 'sass-utils' as *;
+
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 12.5rem;
+    background-color: $neutralWhiteColor;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 8px;
+    overflow-y: hidden;
+}
+
+.Sidebar-header {
+    max-height: 2rem;
+    margin: 0 auto;
+}
+
+.Sidebar-menu {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 3.5rem;
+    overflow-y: scroll;
+    margin-bottom: 4rem;
+}
+
+.Sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}

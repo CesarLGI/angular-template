@@ -1,0 +1,10 @@
+@if(isFloat()){
+<p-floatLabel>
+    <p-inputMask [formControlName]="controlName()" [mask]="mask()" />
+    <label [for]="controlName()" class="Field-label">{{ label() }}</label>
+</p-floatLabel>
+} @else {
+<label [for]="controlName()" class="Field-label">{{ label() }}</label>
+<p-inputMask [formControlName]="controlName()" [mask]="mask()" />
+}
+<validator [controlName]="controlName()" [customErrMsg]="customErrMsg()" />
